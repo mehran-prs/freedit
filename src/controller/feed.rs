@@ -176,6 +176,7 @@ pub(crate) async fn feed(
     Path(uid): Path<u32>,
     Query(params): Query<ParamsFeed>,
 ) -> Result<impl IntoResponse, AppError> {
+    // Get the site config
     let site_config = SiteConfig::get(&DB)?;
     let claim = cookie.and_then(|cookie| Claim::get(&DB, &cookie, &site_config));
     let mut read = false;
