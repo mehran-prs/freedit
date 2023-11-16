@@ -170,7 +170,9 @@ struct Folder {
     is_public: bool,
 }
 
-// The handlers
+struct Check{
+    pub name: String,
+}
 
 
 /// `GET /feed`
