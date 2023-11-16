@@ -170,6 +170,9 @@ struct Folder {
     is_public: bool,
 }
 
+// The handlers
+
+
 /// `GET /feed`
 pub(crate) async fn feed(
     cookie: Option<TypedHeader<Cookie>>,
